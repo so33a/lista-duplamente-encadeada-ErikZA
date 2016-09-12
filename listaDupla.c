@@ -91,3 +91,21 @@ void destroiLista(ListaDupla l) {
   free(l);
 }
 
+void ordena ( ListaDupla l ){
+    link f = l->head;
+    link t = l->head;
+    int aux;
+        while ( t != l->z ) {
+                while ( f != l->z ) {
+                    if(t->item < f->item){
+                    aux = f->item;
+                    f->item = t->item;
+                    t->item = aux;
+            }
+             f = f->next;
+        }
+         f = l->head;
+         t = t->next;
+    }
+}
+
