@@ -109,3 +109,16 @@ void ordena ( ListaDupla l ){
     }
 }
 
+link MostraMenor( ListaDupla l ){
+    link t = l->head;
+    link aux = t->next;
+
+    while( t != l->z ){
+
+        if(t->item <= aux->item){
+            aux = t;
+        }
+        t = t->next;
+    }
+    return aux;
+}
